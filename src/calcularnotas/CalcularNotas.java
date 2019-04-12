@@ -12,9 +12,13 @@ public class CalcularNotas {
         Scanner ler = new Scanner(System.in);
         
         //Menu
-        while (opcao < 4) {
+        while (opcao < 5) {
             System.out.println("\n\nCalculo de Notas, Menu: \n");
-            System.out.println("1 - Cadastrar Alunos\n2 - Cadastar Notas\n3 - Calcular Medias\n4 - Sair");
+            System.out.println("1 - Cadastrar Alunos"
+                    + "\n2 - Cadastar Notas"
+                    + "\n3 - Calcular Média"
+                    + "\n4 - Adicionar pontos extras"
+                    + "\n5 - Sair");
                 opcao = ler.nextInt();    
        
         switch (opcao) {
@@ -24,13 +28,17 @@ public class CalcularNotas {
                     break;
                 case 2:
                     
-                    CalculaNotas.PontosExtra();
+                    CalculaNotas.ReceberNotas();
                     break;       
                 case 3:
                     
                     CalculaNotas.CalcularMedia();
-                    break;       
+                    break; 
                 case 4:
+                    
+                    CalculaNotas.PontosExtra();
+                    break; 
+                case 5:
                     
                     System.out.println("\nProgama encerrado\n");
                     

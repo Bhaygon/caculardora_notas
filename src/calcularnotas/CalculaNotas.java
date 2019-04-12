@@ -10,6 +10,7 @@ public class CalculaNotas {
     int nota2[] = new int [5];
     int nota3[] = new int [5];
     int nota4[] = new int [5];
+    int nota5[] = new int [5];
     int notatotal[] = new int [5];
     int ptsExtra[] = new int [5];
     int media[] = new int [5];
@@ -48,6 +49,8 @@ public class CalculaNotas {
                 nota3[contador] = ler.nextInt();
                 System.out.print("\nNota 4:");
                 nota4[contador] = ler.nextInt();
+                System.out.print("\nNota 5:");
+                nota5[contador] = ler.nextInt();
                 
        }
         notasarmazenadas = true;
@@ -56,6 +59,7 @@ public class CalculaNotas {
             System.out.println("Voce precisa cadastrar alunos primeiro");
         }
     }
+    //Procopio
     
     public void PontosExtra(){
         System.out.println("Pontos extras:");
@@ -68,12 +72,13 @@ public class CalculaNotas {
     }
     //Calcular média e total do aluno
     //Pedro
+    
     public void CalcularMedia(){
         if (nomesrecebidos == true && notasarmazenadas == true) {
         for (contador = 0; contador < nomealuno.length; contador++) {
                 System.out.print("Nome do aluno: " + nomealuno[contador] + "\n");
-                notatotal[contador] = nota1[contador] + nota2[contador] + nota3[contador] + nota4[contador];
-                media[contador] = notatotal[contador] / 4 + ptsExtra[contador];
+                notatotal[contador] = nota1[contador] + nota2[contador] + nota3[contador] + nota4[contador] + ptsExtra[contador];
+                media[contador] = notatotal[contador] / 5 + ptsExtra[contador];
                 System.out.println("Nota total: " + notatotal[contador]);
                 System.out.println("Nota média: " + media[contador]+ "\n");
                 
