@@ -14,7 +14,7 @@ public class CalcularNotas {
         //Menu
         while (opcao < 4) {
             System.out.println("\n\nCalculo de Notas, Menu: \n");
-            System.out.println("1 - Cadastrar Alunos\n2 - Cadastar Notas\n3 - z\n4 - Sair");
+            System.out.println("1 - Cadastrar Alunos\n2 - Cadastar Notas\n3 - Calcular Medias\n4 - Sair");
                 opcao = ler.nextInt();    
        
         switch (opcao) {
@@ -24,11 +24,11 @@ public class CalcularNotas {
                     break;
                 case 2:
                     
-                    CalculaNotas.CadastrarNotas();
+                    CalculaNotas.PontosExtra();
                     break;       
                 case 3:
                     
-                    CalculaNotas.CalcularNotas();
+                    CalculaNotas.CalcularMedia();
                     break;       
                 case 4:
                     
